@@ -7,7 +7,7 @@ from collections import Counter
 
 # 2. Load and preprocess 'organizations.csv' file
 
-data = pd.read_csv("organizations.csv") # download from here ()
+data = pd.read_csv("organizations.csv") # download from here (https://drive.usercontent.google.com/download?id=18vlOi20KcMR328ewc2NBsoBNPrV3vL9Q&export=download&authuser=0)
 # 3. Aggregate top countries, industries, and websites per organization
 org_office_number = data['Name'].value_counts()
 org_office_df = org_office_number.reset_index()
