@@ -1,13 +1,14 @@
+# 1. Import necessary libraries
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from google.colab import files
 from collections import Counter
 
-# Reading file
+# 2. Load and preprocess 'organizations.csv' file
 
 data = pd.read_csv("organizations.csv")
-
+# 3. Aggregate top countries, industries, and websites per organization
 org_office_number = data['Name'].value_counts()
 org_office_df = org_office_number.reset_index()
 grouped_counts = data.groupby('Name', sort=False)['Country'].value_counts()
@@ -33,7 +34,7 @@ for name, group_data in top_countries_per_name.groupby(level=0):
         'Country': group_data.index.get_level_values(1).tolist()
     })
 top_country_df_optimized = pd.DataFrame(com_country_name_optimized)
-
+# 4. Merge various groupings into a single DataFrame (`new_df`)
 merged_data = pd.merge(
     org_office_df,
     top_country_df_optimized,
@@ -91,9 +92,11 @@ new_df = pd.DataFrame({
     'Industry' : new_data_industry['Industry'],
     'Website' : new_data_website['Website']
 })
+# 5. Export processed data as CSV
 new_df.to_csv("Updated Data.csv", index=False)
-files.download("Updated Data.csv")
+files.download("Updated Data.csv") # This will only work for google colab
 
+# 6. Analytics Part Begins 
 # Setup
 custom_palette = [
     '#005073', '#107dac'
