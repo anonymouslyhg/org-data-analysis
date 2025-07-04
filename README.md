@@ -88,19 +88,19 @@ Each of the following visual insights is generated using Seaborn and Matplotlib:
 ![Top Organizations](images/download.png)
 
 ### 2. Offices per Organization
-![Offices per Org](images/download(0).png)
+![Offices per Org](images/download(1).png)
 
 ### 3. Scatter: Employees vs Offices
-![Scatter Plot](images/download(1).png)
+![Scatter Plot](images/download(2).png)
 
 ### 4. Average Employees per Office
-![Average Employees](images/download(2).png)
+![Average Employees](images/download(3).png)
 
 ### 5. Employee Count Distribution
-![Histogram](images/download(3).png)
+![Histogram](images/download(4).png)
 
 ### 6. Organizations by Year Founded
-![Year Founded](images/download(4).png)
+![Year Founded](images/download(5).png)
 
 ---
 
