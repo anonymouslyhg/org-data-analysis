@@ -103,6 +103,15 @@ Each of the following visual insights is generated using Seaborn and Matplotlib:
 ![Year Founded](images/download(5).png)
 
 ---
+## ▶️ How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/anonymouslyhg/org-data-analysis.git
+
+# Install required libraries
+pip install pandas seaborn matplotlib
+---
 
 ## 📦 Final Data Columns (`new_df`)
 
