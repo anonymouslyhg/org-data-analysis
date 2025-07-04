@@ -7,7 +7,7 @@ from collections import Counter
 
 # 2. Load and preprocess 'organizations.csv' file
 
-data = pd.read_csv("organizations.csv")
+data = pd.read_csv("organizations.csv") # download from here ()
 # 3. Aggregate top countries, industries, and websites per organization
 org_office_number = data['Name'].value_counts()
 org_office_df = org_office_number.reset_index()
@@ -94,7 +94,7 @@ new_df = pd.DataFrame({
 })
 # 5. Export processed data as CSV
 new_df.to_csv("Updated Data.csv", index=False)
-files.download("Updated Data.csv") # This will only work for google colab
+#files.download("Updated Data.csv") # This will only work for google colab
 
 # 6. Analytics Part Begins 
 # Setup
